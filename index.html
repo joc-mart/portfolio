@@ -2,6 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <link rel="stylesheet" href="normalize.css">
         <link rel="stylesheet" href="main.css">
 
@@ -14,9 +16,16 @@
             </div>
             <div class="right-nav">
                 <li><a href="/index.html">Portfolio</a></li>
-                <li><a href="pages/about.html">About</a></li>
+                <li><a href="/pages/about.html">About</a></li>
             </div>
         </nav>
-
+        <section class="project-display" id="myApp">
+            <div class="container" v-cloak>
+                <div v-for="(project, index) in projects" v-bind:class="{even: (index + 1) % 2 === 0, odd: (index + 1) % 2 !== 0}">
+                    <div>{{ project.image }}</div>
+                </div>
+            </div>
+        </section>
+        <script src="script.js"></script>
     </body>
 </html>
