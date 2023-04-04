@@ -2,7 +2,7 @@
 
 * {
     font-family: 'Lexend Deca', sans serif;
-    background-color: #F9F9ED;
+    background-color: #f9f6ed;
     color: black;
 }
 nav {
@@ -37,4 +37,13 @@ a {
     justify-content: center;
     order: 1 1 1;
     margin: 5% 20% 20% 20%;
+}
+
+/* about page */
+.about {
+    margin: 5% 20%;
+}
+h2 {
+    font-size: 3rem;
+    font-weight: 800;
 }
